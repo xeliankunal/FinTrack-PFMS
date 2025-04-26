@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card, Row } from "antd";
+import { Card, Row, Col } from "antd";
 import { Line, Pie } from "@ant-design/charts";
 import moment from "moment";
 import TransactionSearch from "./TransactionSearch";
@@ -15,6 +15,7 @@ import Loader from "./Loader";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { unparse } from "papaparse";
+import FinancialGoals from './FinancialGoals';
 
 const Dashboard = () => {
   const [user] = useAuthState(auth);
@@ -228,15 +229,22 @@ const Dashboard = () => {
         <Loader />
       ) : (
         <>
-          <Cards
-            currentBalance={currentBalance}
-            income={income}
-            expenses={expenses}
-            showExpenseModal={showExpenseModal}
-            showIncomeModal={showIncomeModal}
-            cardStyle={cardStyle}
-            reset={reset}
-          />
+          <Row gutter={[16, 16]}>
+            <Col xs={24} md={8}>
+              <Cards
+                currentBalance={currentBalance}
+                income={income}
+                expenses={expenses}
+                showExpenseModal={showExpenseModal}
+                showIncomeModal={showIncomeModal}
+                cardStyle={cardStyle}
+                reset={reset}
+              />
+            </Col>
+            <Col xs={24} md={16}>
+              <FinancialGoals />
+            </Col>
+          </Row>
 
           <AddExpenseModal
             isExpenseModalVisible={isExpenseModalVisible}
@@ -248,27 +256,30 @@ const Dashboard = () => {
             handleIncomeCancel={handleIncomeCancel}
             onFinish={onFinish}
           />
+
           {transactions.length === 0 ? (
             <NoTransactions />
           ) : (
-            <>
-              <Row gutter={16}>
+            <Row gutter={[16, 16]}>
+              <Col xs={24} md={16}>
                 <Card bordered={true} style={cardStyle}>
                   <h2>Financial Statistics</h2>
                   <Line {...{ ...balanceConfig, data: balanceData }} />
                 </Card>
-
-                <Card bordered={true} style={{ ...cardStyle, flex: 0.45 }}>
+              </Col>
+              <Col xs={24} md={8}>
+                <Card bordered={true} style={cardStyle}>
                   <h2>Total Spending</h2>
-                  {spendingDataArray.length == 0 ? (
+                  {spendingDataArray.length === 0 ? (
                     <p>Seems like you haven't spent anything till now...</p>
                   ) : (
                     <Pie {...{ ...spendingConfig, data: spendingDataArray }} />
                   )}
                 </Card>
-              </Row>
-            </>
+              </Col>
+            </Row>
           )}
+
           <TransactionSearch
             transactions={transactions}
             exportToCsv={exportToCsv}

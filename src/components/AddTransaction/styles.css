@@ -1,0 +1,30 @@
+.add-transaction {
+  padding: 20px;
+}
+
+.transaction-card {
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ant-form-item {
+  margin-bottom: 16px;
+}
+
+.ant-input-number {
+  width: 100%;
+}
+
+.ant-select {
+  width: 100%;
+}
+
+.ant-picker {
+  width: 100%;
+}
+
+.ant-btn {
+  height: 40px;
+  font-size: 16px;
+} 

@@ -3,13 +3,19 @@
 /* Add your custom styles below */
 
 :root {
-  --theme: #2970ff;
+  --theme: #2D3748;
+  --theme-gradient: linear-gradient(135deg, #2D3748 0%, #4A5568 100%);
+  --accent-color: #48BB78;
+  --text-color: #2D3748;
+  --background-color: #F7FAFC;
 }
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 input {

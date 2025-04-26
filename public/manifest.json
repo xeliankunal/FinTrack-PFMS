@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "PFMS",
+  "name": "Personal Finance Management System",
+  "description": "A modern personal finance tracker with intuitive UI and powerful analytics",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,8 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#2D3748",
+  "background_color": "#F7FAFC",
+  "orientation": "portrait-primary",
+  "categories": ["finance", "productivity", "utilities"]
 }
