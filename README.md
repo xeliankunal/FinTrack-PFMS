@@ -1,6 +1,16 @@
-# Personal Finance Management System (PFMS)
+# PFMS - Personal Finance Management System
 
 A modern personal finance management system built with React and Firebase, designed for academic purposes and personal use.
+
+## Project Origins
+
+This project is a significantly enhanced version of an existing personal finance tracker. While the core concept was inspired by the original work, this version includes substantial modifications and new features:
+
+- Complete UI redesign with a modern color scheme
+- Custom category management system
+- Financial goals tracking
+- Enhanced transaction management
+- Improved user authentication flow
 
 ## Features
 
@@ -36,8 +46,8 @@ A modern personal finance management system built with React and Firebase, desig
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/xeliankunal/personal-finance-tracker.git
-   cd personal-finance-tracker
+   git clone https://github.com/xeliankunal/PFMS---Personal-Finance-Tracker.git
+   cd PFMS---Personal-Finance-Tracker
    ```
 
 2. Install dependencies:
@@ -75,4 +85,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Note
 
-This project is created for academic purposes and personal use. It is not intended for commercial use.
+This project is created for academic purposes and personal use. It is not intended for commercial use. While the core concept was inspired by existing work, this implementation includes significant modifications and new features.
